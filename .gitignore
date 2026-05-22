@@ -1,0 +1,22 @@
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Databases
+instance/
+*.db
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Test outputs
+test_results.txt
