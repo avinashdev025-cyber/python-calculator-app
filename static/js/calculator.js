@@ -24,17 +24,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.btn');
 
     // 1. Theme Configuration
-    const savedTheme = localStorage.getItem('theme') || 'dark-theme';
+    let savedTheme = 'dark-theme';
+    try {
+        savedTheme = localStorage.getItem('theme') || 'dark-theme';
+    } catch (e) {
+        console.warn('LocalStorage is blocked or inaccessible:', e);
+    }
     document.body.className = savedTheme;
     
     themeToggle.addEventListener('click', () => {
         if (document.body.classList.contains('dark-theme')) {
             document.body.className = 'light-theme';
-            localStorage.setItem('theme', 'light-theme');
+            try {
+                localStorage.setItem('theme', 'light-theme');
+            } catch (e) {
+                console.warn('Failed to save theme in localStorage:', e);
+            }
             showToast('Switched to Light Theme', 'success');
         } else {
             document.body.className = 'dark-theme';
-            localStorage.setItem('theme', 'dark-theme');
+            try {
+                localStorage.setItem('theme', 'dark-theme');
+            } catch (e) {
+                console.warn('Failed to save theme in localStorage:', e);
+            }
             showToast('Switched to Dark Theme', 'success');
         }
     });
