@@ -1,8 +1,8 @@
-# AuraCalc 🌌
+# PyCalc 🌌
 
 A premium, beautifully designed glassmorphic web calculator built with a Python (Flask) backend and SQLite database. 
 
-AuraCalc features clean HSL themes, full computation history logs, a custom AST-safe mathematical expression solver, full physical keyboard integration, keypress feedback glows, and debounced live calculations.
+PyCalc features clean HSL themes, full computation history logs, a custom AST-safe mathematical expression solver, full physical keyboard integration, keypress feedback glows, and debounced live calculations.
 
 ---
 
